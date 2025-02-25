@@ -5,13 +5,13 @@
 1. Экран со списком видео:
     - На главном экране отображается список видео (LazyList) с их миниатюрами, названиями и продолжительностями.
     - Список подгружается из двух API (подробнее - далее).
-    - SwipeRefreshLayout реализован (см. видео).
+    - SwipeRefreshLayout реализован (см. видео ниже).
     - При нажатии на видео из списка открывается экран просмотра.
 
 ![video_list_screen](https://github.com/user-attachments/assets/658a4b58-392e-4d2a-b7c0-e4bad3a4dceb)
 
 2. Экран просмотра видео:
-    - Видео воспроизводится с использованием ЕxoPlayer (как на видео) ЛИБО с использвоанием WebView (так как [YouTube очень не хочет отдавать ссылку на файл видео](https://developer.android.com/media/media3/exoplayer/troubleshooting#can-i-play-youtube-videos-directly-with-exoplayer)).
+    - Видео воспроизводится с использованием ЕxoPlayer (как на видео ниже) ЛИБО с использвоанием WebView (так как [YouTube очень не хочет отдавать ссылку на файл видео](https://developer.android.com/media/media3/exoplayer/troubleshooting#can-i-play-youtube-videos-directly-with-exoplayer)).
     - На экране есть кнопки управления воспроизведением (пауза, воспроизведение, перемотка).
     - Поворот экрана или нажатие на кнопку полноэкранного просмотра открывает видео на полный экран
     
