@@ -19,7 +19,7 @@
         tools:targetApi="31">
 
         <activity
-            android:configChanges="orientation|screenSize"
+            android:configChanges="orientation"
             android:name=".ui.videoplayer.VideoPlayerActivity"
             />
 

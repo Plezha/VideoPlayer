@@ -44,14 +44,16 @@ class VideoPlayerViewModel @Inject constructor(
     }
 
     fun enterFullscreen() {
-        if (_state.value is VideoPlayerState.Success) {
+        val state = _state.value
+        if (state is VideoPlayerState.Success && !state.isVideoFullscreen) {
             _state.value = (_state.value as VideoPlayerState.Success)
                 .copy(isVideoFullscreen = true)
         }
     }
 
     fun exitFullscreen() {
-        if (_state.value is VideoPlayerState.Success) {
+        val state = _state.value
+        if (state is VideoPlayerState.Success && state.isVideoFullscreen) {
             _state.value = (_state.value as VideoPlayerState.Success)
                 .copy(isVideoFullscreen = false)
         }
