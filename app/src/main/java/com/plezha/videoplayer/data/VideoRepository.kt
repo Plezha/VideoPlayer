@@ -14,7 +14,7 @@ import java.lang.String.format
 import java.util.Locale
 import javax.inject.Inject
 
-class YoutubeRepository @Inject constructor(
+class VideoRepository @Inject constructor(
     private val youtubeApi: YoutubeApiService,
     private val videoApi: VideoApiService,
     private val db: AppDatabase

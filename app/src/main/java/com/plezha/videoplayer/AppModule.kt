@@ -2,7 +2,7 @@ package com.plezha.videoplayer
 
 import android.content.Context
 import androidx.room.Room
-import com.plezha.videoplayer.data.YoutubeRepository
+import com.plezha.videoplayer.data.VideoRepository
 import com.plezha.videoplayer.data.api.VideoApiConfig
 import com.plezha.videoplayer.data.api.VideoApiService
 import com.plezha.videoplayer.data.api.YoutubeApiConfig
@@ -43,5 +43,5 @@ object AppModule {
         youtubeApi: YoutubeApiService,
         videoApi: VideoApiService,
         db: AppDatabase
-    ) = YoutubeRepository(youtubeApi, videoApi, db)
+    ) = VideoRepository(youtubeApi, videoApi, db)
 }

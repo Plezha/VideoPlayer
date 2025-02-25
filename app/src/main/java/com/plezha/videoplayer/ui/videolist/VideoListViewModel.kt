@@ -2,7 +2,7 @@ package com.plezha.videoplayer.ui.videolist
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.plezha.videoplayer.data.YoutubeRepository
+import com.plezha.videoplayer.data.VideoRepository
 import com.plezha.videoplayer.data.model.Video
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
@@ -15,7 +15,7 @@ import javax.inject.Inject
 
 @HiltViewModel
 class VideoListViewModel @Inject constructor(
-    private val repo: YoutubeRepository
+    private val repo: VideoRepository
 ) : ViewModel() {
     private val _state = MutableStateFlow<VideoListState>(VideoListState(isLoading = true))
     val state: StateFlow<VideoListState> = _state.asStateFlow()

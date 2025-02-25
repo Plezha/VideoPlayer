@@ -3,7 +3,7 @@ package com.plezha.videoplayer.ui.videoplayer
 import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.plezha.videoplayer.data.YoutubeRepository
+import com.plezha.videoplayer.data.VideoRepository
 import com.plezha.videoplayer.data.model.Video
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
@@ -17,7 +17,7 @@ import javax.inject.Inject
 @HiltViewModel
 class VideoPlayerViewModel @Inject constructor(
     private val savedStateHandle: SavedStateHandle,
-    private val repo: YoutubeRepository
+    private val repo: VideoRepository
 ) : ViewModel() {
     private val _state = MutableStateFlow<VideoPlayerState>(VideoPlayerState.Loading)
     val state: StateFlow<VideoPlayerState> = _state.asStateFlow()
